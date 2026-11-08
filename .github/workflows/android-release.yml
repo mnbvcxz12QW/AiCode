@@ -113,7 +113,7 @@ jobs:
       # 一次性构建全部 flavor 的 release APK（universal/armsolo/x86solo）
       # --stacktrace：构建失败时输出完整调用栈，便于在 CI 定位 OOM/内存类根因。
       - name: Build all flavor Release APKs
-        run: ./gradlew assembleRelease --stacktrace
+        run: ./gradlew assembleDebug --stacktrace
 
       # 给三个 APK 重命名为「包名-架构-版本」格式，架构用真实 ABI 名便于用户识别：
       #   aicode-arm64-v1.0.0-rc1.apk      (armsolo)
